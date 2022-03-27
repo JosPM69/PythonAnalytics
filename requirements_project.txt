@@ -1,4 +1,5 @@
 streamlit
 numpy
 pandas
-seaborn
+pandas_profiling
+streamlit_pandas_profiling
