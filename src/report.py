@@ -7,9 +7,6 @@ from pandas_profiling import ProfileReport
 
 df = pd.read_csv("data/Data_limpia.csv", na_values=['='])
 
-
-
-
 profile = ProfileReport(df, title="Salario Data", dataset={
         "description": "This profiling report was generated for Analytics",
         "copyright_holder": "Análisis por Josué Pérez",
