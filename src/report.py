@@ -10,65 +10,27 @@ df = pd.read_csv("data/Data_limpia.csv", na_values=['='])
 
 
 
-profile = ProfileReport(df,
-
-                        title="Salario Data",
-
-        dataset={
-
+profile = ProfileReport(df, title="Salario Data", dataset={
         "description": "This profiling report was generated for Analytics",
-
-        "copyright_holder": "Analytics for Josué",
-
-        "copyright_year": "2022",
-
-        #"url": "https://www.analyticsvidhya.com/blog/",
-
-    },
-
+        "copyright_holder": "Análisis por Josué Pérez",
+        "copyright_year": "2022"},
     variables={
-
         "descriptions": {
-
-            #"timestamp": "Name of the state",
-
             "company": "Nombres de las compañías",
-
-            #"title": "Títulos",
-
             "totalyearlycompensation": "Compensación total anual",
-
-            #"location": "locación",
-
-            #"yearsofexperience": "Años de experiencia",
-
-            #"yearsatcompany": "Años en la compañía",
-
-            #"tag": "Etiqueta",
-
+            "yearsofexperience": "Años de experiencia",
+            "yearsatcompany": "Años en la compañía",
             "basesalary": "Salario base",
-
-            #"stockgrantvalue": "How much production?",
-
-            #"bonus": "How much production?",
-
-            "gender": "How much production?",
-
-            "Race": "How much production?",
-            
-            "Education": "How much production?"
-
+            "stockgrantvalue": "Concesión de acciones",
+            "bonus": "Bonus",
+            "gender": "Género",
+            "Race": "Raza",
+            "Education": "Nivel de educación"
         }
-
     }
-
 )
 
 
-
-
-st.title("Pandas Profiling in Streamlit!")
-
+st.title("Reporte de Pandas profiling en Streamlit")
 st.write(df)
-
 st_profile_report(profile)
